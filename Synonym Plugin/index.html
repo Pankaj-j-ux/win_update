@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>TinyMCE | SYNPLUG </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--StyleSheet ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    -->
+    
+    <style>
+      .bg{
+        background-image: url("images/bg_photo.jpg");
+        background-size: cover ;
+      }
+
+      .main_heading{
+        opacity: 0.9;
+      }
+
+    </style>
+    <link rel="stylesheet" href="css/myStyle.css">
+    
+  </head>
+  
+  <body class="bg">
+    
+    <!-- SYNONYMS DIALOG BOX CONTENT |||||||||||||||||||||||||||||||||||||||||| -->
+     
+    <div id="white_background" ></div>
+    <div class="container" id="syn_dlg">
+      <div class="dlg_header">
+        <div class="row">
+          <div class="col_8">
+            <h2>LOOKUP SYNONYMS</h2>
+          </div>
+          <div class="col_4 align_right">
+            <i class="fa fa-times fa-lg" onclick="closeDlg();" aria-hidden="true"></i>
+
+          </div>
+        </div><hr>
+      </div>
+
+      <div class="dlg_body">
+        <!-- <form method="GET" class="form" id="syn_form"> -->
+          <div class="row">
+            <div class="col_12">
+              <label for="word">Type in word(s) and Press the button for synonyms</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col_8">
+              <input type="text" style="width: 260px;" name="word" autocomplete="off" id="word" placeholder="Enter the Word" >
+            </div>
+            <div class="col_4">
+              <input type="button" style="width: 100px; height: 40px;" onclick="fetchSynonym();" name="button" value="Synonyms">
+            </div>
+          </div>
+        <!-- </form> -->
+        <div class="row">
+          <div class="col_12">
+            <hr><h3>SYNONYMS</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col_12">
+            <div class="display">
+              <select name="word" id="selector_syn" onchange="selector();">
+                <option value="count_syn">Select the Synonym</option>          
+              </select>
+              <input type="text" id="count_syn" style="margin: 10px; padding: 10px;">
+              <div id="count_syn2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      
+      
+</div>           
+           
+    
+    <!--HEADER OF THE PAGE ||||||||||||||||||||||||||||||||||||||||||||||  -->
+  <header>
+    <div class="container align_center header_dec">
+      <div class="row">
+        <div class="col_12">
+          <h1 class="main_heading" >My version TinyMCE with Synonym Plugin</h1>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+
+  <!-- TINTMCE TEXT EDITOR |||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+ 
+  <section>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col_12">
+          <form method="POST" class="form" id="editor_form">
+            <textarea id="workplace">
+                This editor has a synonym lookup feature!!!
+            </textarea>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </section>    
+  
+    
+
+
+
+  <!-- SCRIPTING |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script src="js/synonym.js"></script>
+
+    <script>
+      tinymce.init({
+        selector: "textarea",
+        plugins: "synonym",
+        toolbar:
+          "undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | indent outdent | synonym",
+      });
+      
+
+
+      
+
+    </script>
+  
+  </body>
+</html>
