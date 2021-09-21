@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* HEADER >>>>>>>>>>>>>>>> */
+
+
+.nav-search-btn{
+  background-color : #febd69;
+  width : 45px;
+  height : 70%; 
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+
+.nav-search-btn:hover{
+  background-color: #e79325;
+}
+
+.nav-search{
+  width : 91%;
+  height : 70%;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.nav-search{
+  outline: none;
+}
+
+.nav-search:hover{
+  border: solid 3px #f7b157;
+}
+
+.active-link{
+  border:solid white 1px;
+  border-radius: 5px;
+}
+
+.login-nav, .order-nav, .prime-nav, .cart-nav, .login-nav:hover, .order-nav:hover, .prime-nav:hover, .cart-nav:hover{
+  color: white;
+  text-decoration: none ;
+}
+
+
+/* HOME >>>>>>>>>>>>>>>>>>>>>>> */
+
+.grad-container{
+  background-image: linear-gradient(rgba(250, 161, 60, 0.87) 10px, rgb(189, 191, 196), rgba(228, 228, 228, 0.726));
+}
+
+.footD{
+  background-color: linear-gradient(#fff,rgba(255,255,255,0),#fff);
+}

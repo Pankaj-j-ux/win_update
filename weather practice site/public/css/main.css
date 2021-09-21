@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+:root{
+    --main-bg : #1e272e;
+    --main-color : #0097e6;
+}
+
+html{
+    font-size: 62.5%; /* 1rem = 10px */ 
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    margin: 0px;
+}
+
+.main_header{
+    background-color: var(--main-bg);
+}
+
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.navbar li{
+    margin-left: 1.5rem;
+}
+
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+button{
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding: 1.2rem 1.2rem;
+    color: #fff;
+    background-color: var(--main-bg);
+    border-radius: 2rem;
+    box-shadow: 0px 8px 6px -6px #000;
+}
+
+button:hover{
+    color: var(--main-color);
+}
+
+
+footer{
+    width: 100%;
+    background-color: var(--main-bg );
+    margin-top: auto;
+}
+
+footer p{
+    margin: 0px;
+    text-align: center;
+    color: #fff;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    
+}
+
+.main_body_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+figure img{
+    height: 40rem;
+    width: 28rem;
+}
+
+.main_body_right figure img{
+    filter: drop-shadow(0 0.5rem 1rem #000);
+
+}
+
+.main_body_left{
+    padding-top: 2rem;
+}
+
+.main_body_right{
+    padding-top: 2rem;
+}
+
+.temp_form{
+    /* filter: drop-shadow(0 0.5rem 1rem #000); */
+    box-shadow: 0 0.5rem 1rem #000;
+    border-radius: 2rem;
+    width: 60rem ;
+    margin: auto;
+    padding-bottom: 0px;
+}
+
+#cityName{
+    font-size: 1.5rem;
+    margin: 4px;
+    width: 50rem;
+    height:3.5rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+
+#cityName:focus{
+    outline: none;
+
+}
+
+#submit_btn{
+    border: none;
+    font-size: 1.5rem;
+    margin: 4px;
+    padding: 5px;
+    height: 3.8rem;
+    width:7rem;
+    border-radius: 2rem;
+    background-color: var(--main-bg);
+    color: #fff;
+}
+
+.top_layer{
+    display: flex;
+    flex-direction: row;
+}
+
+.middle_layer{
+    display: flex;
+    flex-direction: row;
+    font-size: 5rem;
+    width: 100%;
+    padding-left: 110px;
+}
+
+.res_section{
+    width: 40rem;
+    min-height: 20rem;
+    margin: auto;
+    padding: 1rem;
+    padding-top: 10rem;
+    font-size: 1.8rem;
+}
+
+#city_name{
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
